@@ -23,3 +23,21 @@ eval $(ssh-agent)
 ``` {sh }
 ssh-add
 ```
+# For remote connection to servers
+For a linux server use the following to allow connections
+
+```
+sudo iptables -A OUTPUT -p tcp --dport 22 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
+sudo iptables -A INPUT -p tcp --sport 22 -m conntrack --ctstate ESTABLISHED -j ACCEPT
+```
+
+* remember to allow connections through port 22 on your local router
+
+```
+sudo apt-get install openssh-server 
+
+```
+Then to open a remote command line connection to the server do the following
+```
+ssh <username>@<ip-address>
+```
