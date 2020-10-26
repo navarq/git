@@ -13,6 +13,9 @@ ssh-copy-id "$PUBKEYPATH" "$USER_AT_HOST"
 ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa
 ```
 
+# Need to authenticate?
+
+The following two lines are what need to be done each time you want to add to a source code repo or download one
 ``` {sh }
 eval $(ssh-agent)
 ```
