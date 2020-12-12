@@ -23,5 +23,10 @@ sudo adduser <username> docker
 
 To remove a user from a group do
 ```
-sudo deluser <uisername> docker
+sudo deluser <username> docker
+```
+
+Allow the docker group to do things in the dub dub dub folder
+```
+sudo chgrp -R docker /var/www/
 ```
