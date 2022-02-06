@@ -23,6 +23,18 @@ eval $(ssh-agent)
 ``` {sh }
 ssh-add
 ```
+lookup the generated public key
+```
+cat ~/.ssh/id_rsa.pub 
+```
+
+Next go to settings
+```
+https://github.com/settings/keys
+
+
+and copy the PUBLIC (.pub) key into the place listed.
+
 # For remote connection to servers
 For a linux server use the following to allow connections
 
